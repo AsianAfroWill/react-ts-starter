@@ -1,12 +1,17 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:recommended"
-    ],
-    "jsRules": {},
-    "rules": {
-        "interface-name": [true, "never-prefix"],
-        "only-arrow-functions": true
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {},
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "only-arrow-functions": true,
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "groups": ["^[^./][^/]*$", "^[^.]", "^\\."]
+      }
+    ]
+  },
+  "rulesDirectory": []
 }
